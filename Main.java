@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class java10828 {
+public class Main {
 
     public static Stack<Integer> stack = new Stack<>();
     public static StringBuilder sb = new StringBuilder();
