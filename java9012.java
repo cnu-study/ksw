@@ -1,31 +1,38 @@
 import java.util.*;
+
 public class java9012 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-
-        int n = in.nextInt();
-
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
-            Stack<Character> stack = new Stack<>();
-            String bae = in.next();
+            String string = sc.next();
+            Stack st = new Stack();
+            boolean success = true;
+            for (int j = 0; j < string.length(); j++) {
+                char ch = string.charAt(j);
+                if ( ch == ')' ) {
 
-            for (int j = 0; j < bae.length(); j++) {
-                char c = bae.charAt(j);
-
-                if (c == '(') {
-                    stack.push(c);
-                } else if (c == ')') {
-                    if (stack.empty()) {
-                        System.out.println("NO");
-                        break;
+                    if (st.empty() == true) {
+                        success = false;
                     }
-                    stack.pop();
+                    else {
+                        st.pop();
+                    }
+
+                }
+                else if (ch =='(') {
+                    st.push('(');
                 }
             }
-            if (stack.empty()) {
-                System.out.println("NO");
-            } else {
+            if (st.empty() == false) {
+                success = false;
+            }
+
+            if (success == true) {
                 System.out.println("YES");
+            }
+            else {
+                System.out.println("NO");
             }
         }
     }
