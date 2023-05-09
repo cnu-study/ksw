@@ -1,11 +1,9 @@
 import java.util.*;
-
 public class java18258 {
-
-    Queue<Integer> queue = new LinkedList<>();
     public static StringBuilder sb = new StringBuilder();
-
     public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+        Deque<String> deque = new ArrayDeque<>();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
@@ -13,9 +11,13 @@ public class java18258 {
             String st = sc.next();
             if(st.equals("push")){
                 int a = sc.nextInt();
-                queue.push(a);
+                queue.add(a);
             }
-            else if(st.equals("top"))
+            else if(st.equals("front"))
+            {
+                sb.append(queue.isEmpty() ? -1 : queue.peek()).append('\n');
+            }
+            else if(st.equals("back"))
             {
                 sb.append(queue.isEmpty() ? -1 : queue.peek()).append('\n');
             }
@@ -29,7 +31,7 @@ public class java18258 {
             }
             else if(st.equals("pop"))
             {
-                sb.append(queue.isEmpty() ? -1 : queue.pop()).append('\n');
+                sb.append(queue.isEmpty() ? -1 : queue.remove()).append('\n');
             }
         }
         System.out.println(sb);
