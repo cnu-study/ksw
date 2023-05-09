@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class Main {
+public class java18258 {
 
-    public static Stack<Integer> stack = new Stack<>();
+    Queue<Integer> queue = new LinkedList<>();
     public static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) {
@@ -13,23 +13,23 @@ public class Main {
             String st = sc.next();
             if(st.equals("push")){
                 int a = sc.nextInt();
-                stack.push(a);
+                queue.push(a);
             }
             else if(st.equals("top"))
             {
-                sb.append(stack.isEmpty() ? -1 : stack.peek()).append('\n');
+                sb.append(queue.isEmpty() ? -1 : queue.peek()).append('\n');
             }
             else if(st.equals("size"))
             {
-                sb.append(stack.size()).append('\n');
+                sb.append(queue.size()).append('\n');
             }
             else if(st.equals("empty"))
             {
-                sb.append(stack.isEmpty() ? 1 : 0).append('\n');
+                sb.append(queue.isEmpty() ? 1 : 0).append('\n');
             }
             else if(st.equals("pop"))
             {
-                sb.append(stack.isEmpty() ? -1 : stack.pop()).append('\n');
+                sb.append(queue.isEmpty() ? -1 : queue.pop()).append('\n');
             }
         }
         System.out.println(sb);
