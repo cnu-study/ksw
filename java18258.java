@@ -1,39 +1,49 @@
+import java.io.*;
 import java.util.*;
+
 public class java18258 {
-    public static StringBuilder sb = new StringBuilder();
-    public static void main(String[] args) {
-        Queue<Integer> queue = new LinkedList<>();
-        Deque<String> deque = new ArrayDeque<>();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        Deque<Integer> deque = new LinkedList<>();
+        int n = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < n; i++) {
-            String st = sc.next();
-            if(st.equals("push")){
-                int a = sc.nextInt();
-                queue.add(a);
-            }
-            else if(st.equals("front"))
-            {
-                sb.append(queue.isEmpty() ? -1 : queue.peek()).append('\n');
-            }
-            else if(st.equals("back"))
-            {
-                sb.append(queue.isEmpty() ? -1 : queue.peek()).append('\n');
-            }
-            else if(st.equals("size"))
-            {
-                sb.append(queue.size()).append('\n');
-            }
-            else if(st.equals("empty"))
-            {
-                sb.append(queue.isEmpty() ? 1 : 0).append('\n');
-            }
-            else if(st.equals("pop"))
-            {
-                sb.append(queue.isEmpty() ? -1 : queue.remove()).append('\n');
+            String[] cmd = br.readLine().split(" ");
+
+            if (cmd[0].equals("push")) {
+                deque.add(Integer.parseInt(cmd[1]));
+            } else if (cmd[0].equals("pop")) {
+                if (deque.isEmpty()) {
+                    bw.write("-1\n");
+                } else {
+                    bw.write(deque.poll() + "\n");
+                }
+            } else if (cmd[0].equals("size")) {
+                bw.write(deque.size() + "\n");
+            } else if (cmd[0].equals("empty")) {
+                if (deque.isEmpty()) {
+                    bw.write("1\n");
+                } else {
+                    bw.write("0\n");
+                }
+            } else if (cmd[0].equals("front")) {
+                if (deque.isEmpty()) {
+                    bw.write("-1\n");
+                } else {
+                    bw.write(deque.peek() + "\n");
+                }
+            } else if (cmd[0].equals("back")) {
+                if (deque.isEmpty()) {
+                    bw.write("-1\n");
+                } else {
+                    bw.write(deque.peekLast() + "\n");
+                }
             }
         }
-        System.out.println(sb);
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
