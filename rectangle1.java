@@ -9,7 +9,7 @@ class Rectangle {//클래스 생성
     int height;   // int형 변수 선언
     public void setRectangle(int a, int b, int c, int d) {//메소드 생성
         x = a;//메소드에 입력받은 a 값을 x에 저장
-        y = b;//메소드에 입력받은 b 값을 y에 저장
+        y = b;//메소드에 입력받은 b 값zz을 y에 저장
         width = c;//메소드에 입력받은 c 값을 width에 저장
         height = d;//메소드에 입력받은 d 값을 height에 저장
     }
