@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+public class java2775 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int[][] arr = new int[15][15];
