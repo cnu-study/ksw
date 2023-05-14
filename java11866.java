@@ -25,8 +25,6 @@ public class java11866
 			
 			sb.append(q.poll()).append(", ");
 		}
- 
-		// 마지막 원소 출력한 뒤 > 도 붙여준다.
 		sb.append(q.poll()).append('>');
 		System.out.println(sb);
     }
