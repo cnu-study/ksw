@@ -1,8 +1,10 @@
 import java.util.*;
-public class Main {
+public class java2558 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println(104);
-        System.out.println("kosw");
+        int a = in.nextInt();
+        int b = in.nextInt();
+
+        System.out.println(a+b);
     }
 }
