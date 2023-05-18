@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+public class java10813 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -17,7 +17,7 @@ public class Main {
             tmp = arr[a-1];
             arr[a-1] = arr[b-1];
             arr[b-1] = tmp;
-            }
+        }
 
 
         for (int i = 0; i < n; i++) {
