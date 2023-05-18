@@ -1,34 +1,30 @@
+
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int m = in.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = i+1;
+        Scanner sc = new Scanner(System.in);
+
+        int a[] = new int [9];
+
+        for (int i = 0; i < 9; i++) {
+            a [i] = sc.nextInt();
         }
 
-        for (int i = 0; i < m; i++) {
-            int a = in.nextInt();
-            int b = in.nextInt();
-            if(a == b){
-                continue;
-            }
-            else{
+        int b[] = new int [9];
 
-                for (int j = 0; j < (b - a + 1) / 2; j++) {
-                    int tmp = arr[a - 1 + j];
-                    arr[a - 1 + j] = arr[b - 1 - j];
-                    arr[b - 1 - j] = tmp;
-                }
-
-            }
+        for (int i = 0; i < 9; i++) {
+            b[i] = a[i];
         }
 
+        Arrays.sort(a);
 
-        for (int i = 0; i < n; i++) {
-            System.out.println(arr[i]);
+        System.out.println(a[8]);
+
+        for (int i = 0; i < 9; i++) {
+            if (b[i] == a[8]) {
+                System.out.println(i+1);
+            }
+
         }
     }
-}
+}   
