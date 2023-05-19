@@ -1,30 +1,22 @@
-import java.util.Scanner;
 
-public class java2525
-{
+import java.util.*;
+public class java2525 {
     public static void main(String[] args) {
-        Scanner ac = new Scanner(System.in);
-        int h = ac.nextInt();
-        int m = ac.nextInt();
-        int c = ac.nextInt();
-
-        int cnt = (m + c) / 60;
-
-        int M = m+c-(60*cnt);
-        if(cnt < 1) {
-            System.out.printf("%d %d",h,m+c);
+        Scanner in = new Scanner(System.in);
+        int h = in.nextInt();
+        int m = in.nextInt();
+        int n = in.nextInt();
+        int cnt = (m+n)/60;
+        if(m + n < 60){
+            System.out.printf("%d %d",h,m+n);
         }
-        else{
-            if(cnt >= 1) {
-                if(h + cnt >= 24) {
-                    System.out.printf("%d %d",h + cnt - 24,M);
-                }
-                else {
-                    System.out.printf("%d %d", h + cnt, M);
-                }
+        else if(m + n >=60){
+            if(cnt + h < 24){
+                System.out.printf("%d %d",h + cnt,m+n - 60*cnt);
+            }
+            else if(cnt + h >= 24){
+                System.out.printf("%d %d",h + cnt - 24,m+n - 60*cnt);
             }
         }
-
-        ac.close();
     }
-}
+}   
