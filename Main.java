@@ -3,32 +3,31 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int cnt = 0;
-        int sum = 0;
+        Stack<Integer>[] stack = new Stack[7];
         int n = in.nextInt();
-        int a = n/10;
-        int b = n%10;
-        int f = 0;
+        int cnt = 1;
+        for (int i = 1; i <= 6; i++) {
+            stack[i] = new Stack<Integer>();
+            stack[i].push(0);
+        }
 
-        if(n == 0){
-            System.out.println(n);
-        }else{
-            while(true){
-                if(n==f){
-                    System.out.println(cnt);
-                    break;
-                }
-                else{
-                    sum = a + b;
-                    if(sum>=10){
-                        sum = sum % 10;
-                    }
-                    a = b;
-                    b = sum;
-                    f = a*10 + b;
-                }
+        stack[in.nextInt()].push(in.nextInt());
+
+        for (int i = 1; i < n; i++) {
+            int ln = in.nextInt();
+            int fn = in.nextInt();
+
+            while (stack[ln].peek() > fn) {
+                stack[ln].pop();
+                cnt++;
+            }
+
+            if (stack[ln].peek() != fn) {
+                stack[ln].push(fn);
                 cnt++;
             }
         }
+        System.out.println(cnt);
     }
+
 }

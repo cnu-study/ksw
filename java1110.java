@@ -10,21 +10,25 @@ public class java1110 {
         int b = n%10;
         int f = 0;
 
-        while(true){
-            if(n==f){
-                System.out.println(cnt);
-                break;
-            }
-            else{
-                sum = a + b;
-                if(sum>10){
-                    sum = sum % 10;
+        if(n == 0){
+            System.out.println("1");
+        }else{
+            while(true){
+                if(n==f){
+                    System.out.println(cnt);
+                    break;
                 }
-                a = b;
-                b = sum;
-                f = a*10 + b;
+                else{
+                    sum = a + b;
+                    if(sum>=10){
+                        sum = sum % 10;
+                    }
+                    a = b;
+                    b = sum;
+                    f = a*10 + b;
+                }
+                cnt++;
             }
-            cnt++;
         }
     }
 }
