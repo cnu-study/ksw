@@ -8,5 +8,6 @@ public class java1000
         int B = ac.nextInt();
         System.out.println(A+B);
         ac.close();
+        
     }
 }
