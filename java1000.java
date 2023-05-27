@@ -7,7 +7,6 @@ public class java1000
         int A = ac.nextInt();
         int B = ac.nextInt();
         System.out.println(A+B);
-        ac.close();
-        
+        ac.close();        
     }
 }
