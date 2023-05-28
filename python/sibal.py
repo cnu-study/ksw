@@ -41,3 +41,33 @@
 # print(dic.clear())
 # print(dic.get('no','yes'))
 
+# s1 = set([3,2,1])
+# print(s1)
+# s2 = set("Hello")
+# print(s2)
+# li = list(s1)
+# print(li)
+# print(li[0])
+# tl = tuple(s1)
+# print(tl)
+
+
+# s1 = set([1, 2, 3, 4, 5, 6])
+# s2 = set([4, 5, 6, 7, 8, 9])
+# print(s1 & s2)
+# print(s1.intersection(s2))
+# print(s1 | s2)
+# print(s1.union(s2))
+# print(s1 - s2)
+# print(s2 - s1)
+# print(s1.difference(s2))
+# print(s2.difference(s1))
+
+# s1 = set([1,2,3])
+# s1.add(4)
+# print(s1)
+# s1.update([1,2,4,2,5,6,2])
+# print(s1)
+# s1.remove(5)
+# print(s1)
+
