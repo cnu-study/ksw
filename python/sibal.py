@@ -70,3 +70,39 @@
 # print(s1)
 # s1.remove(5)
 # print(s1)
+
+# a = 1
+# b = 2
+# print(b is a)
+# a, b = ('python', 'life')
+# (a, b) = 'python', 'life'
+# print(a)
+# print(b)
+
+# if 1 in [1,2,3]:
+#     print("hello")
+    
+# if 1 not in [1,2,3]:
+#     print("hello")
+
+# for i in range(3):
+#     print("h")
+    
+
+# a = [(1,5), (3,4), (5,6)]
+# for (first, last) in a:
+#     print(first + last)
+# a = [1,2,3,4]
+# result = []
+# for num in a:
+#     result.append(num*3)
+# print(result)
+
+# def say():
+#     return 'Hi' 
+
+# a = say()
+# print(a)
+
+
+
