@@ -1,9 +1,12 @@
 import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
-        System.out.println(a);    
+        String[] n = in.nextLine().split("");
+        for (int i = 0; i < n.length; i++) {
+            System.out.println(n[i].charAt(0));
+        }
+        
+
     }
 }
